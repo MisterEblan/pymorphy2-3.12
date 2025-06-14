@@ -1,3 +1,8 @@
+# About fork
+
+It just fixes `argspec` problem that I have with python3.12.
+For my personal use.
+
 pymorphy2
 =========
 
