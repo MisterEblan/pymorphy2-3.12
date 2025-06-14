@@ -67,7 +67,8 @@ class BaseAnalyzerUnit(object):
         """
         if cls.__init__ is object.__init__:
             return []
-        args, varargs, kw, default = inspect.getargspec(cls.__init__)
+        argspec = inspect.getfullargspec(cls.__init__)
+        args, varargs, kw, default = argspec.args, argspec.varargs, argspec.varkw, argspec.defaults
         return sorted(args[1:])
 
     def _get_params(self):
